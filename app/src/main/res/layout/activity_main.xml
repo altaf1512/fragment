@@ -1,56 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
-        android:id="@+id/frame_layout"
+        android:id="@+id/flFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#2E6F6F">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomView"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:background="#2E6F6F"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/fragment1_button"
-                android:layout_width="217dp"
-                android:layout_height="76dp"
-                android:onClick="goToFirst"
-                android:text="PROFIL">
-
-            </Button>
-
-            <Button
-                android:id="@+id/fragment2_button"
-                android:layout_width="211dp"
-                android:layout_height="70dp"
-                android:onClick="goToSecond"
-                android:text="PENGADUAN">
-
-            </Button>
-
-        </LinearLayout>
-    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_view"/>
 
 
-
-
-
-
-
-
-
-</LinearLayout>
-
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>

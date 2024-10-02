@@ -46,9 +46,7 @@ public class Register extends AppCompatActivity {
 
         btnRegistrasi = findViewById(R.id.btn_registrasi);
         edtFullname = findViewById(R.id.edt_fullname);
-        edtUsername = findViewById(R.id.edt_username);
         edtEmail = findViewById(R.id.edt_email);
-        edtNim = findViewById(R.id.edt_nim);
         edtPassword = findViewById(R.id.edt_password);
         edtAlamat = findViewById(R.id.edt_alamat);
         edtNohp = findViewById(R.id.edt_nohp);
@@ -71,17 +69,15 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String fullname = edtFullname.getText().toString();
-                String username = edtUsername.getText().toString();
                 String email = edtEmail.getText().toString();
-                String nim = edtNim.getText().toString();
                 String password = edtPassword.getText().toString();
                 String tanggal = edtTanggal.getText().toString();
                 String alamat = edtAlamat.getText().toString();
                 String nohp = edtNohp.getText().toString();
 
-                Toast.makeText(Register.this, "Nama: " + fullname + ", email: " + email + ",username: " + username + ",nim: " + nim + ",password: " + password + ",tanggal: " + tanggal + ",alamat: " + alamat + ",nohp: " + nohp + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(Register.this, "Nama: " + fullname + ", email: " + email + ",password: " + password + ",tanggal: " + tanggal + ",alamat: " + alamat + ",nohp: " + nohp + "", Toast.LENGTH_LONG).show();
 
-                Intent i = new Intent(Register.this, MainActivity.class);
+                Intent i = new Intent(Register.this, Login.class);
                 startActivity(i);
             }
         });
